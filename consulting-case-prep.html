@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Case Interview Prep | BHS Finance Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+
+        header {
+            background-color: #0f172a;
+            color: white;
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 5%;
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .breadcrumb span {
+            color: #64748b;
+            margin: 0 0.5rem;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem 0;
+            color: #0f172a;
+            font-weight: 800;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #475569;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .case-type-box {
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-left: 4px solid #3b82f6;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .case-type-box h3 {
+            margin-top: 0;
+            color: #3b82f6;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .step-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #cbd5e1;
+            text-align: center;
+        }
+
+        .step-number {
+            background: #3b82f6;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .step-box h4 {
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .step-box p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        li strong {
+            color: #0f172a;
+        }
+
+        .tip-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h4 {
+            color: #1e3a8a;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .tip-box p {
+            color: #1e40af;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 3.5rem 5%;
+            margin-top: 6rem;
+            border-top: 3px solid #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .step-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BHS Finance Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="learning.html">Self-Learning Hub</a>
+        <span>›</span>
+        <a href="pathway-consulting.html">Consulting</a>
+        <span>›</span>
+        Case Interview Prep
+    </div>
+
+    <div class="content">
+        <h1>Consulting Case Interview Preparation</h1>
+        <p>Case interviews are the primary method consulting firms use to evaluate candidates. They test your ability to solve business problems in real-time using structured thinking, quantitative analysis, and clear communication. This guide covers everything you need to know to excel.</p>
+
+        <h2>The Case Interview Structure</h2>
+        <p>Mastering the case interview requires understanding the four-step process consultants use to solve problems:</p>
+
+        <div class="step-grid">
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <h4>Clarify</h4>
+                <p>Understand the problem, ask clarifying questions, confirm objectives</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <h4>Structure</h4>
+                <p>Create a framework to organize your analysis</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <h4>Analyze</h4>
+                <p>Work through your framework, perform calculations, test hypotheses</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">4</div>
+                <h4>Synthesize</h4>
+                <p>Deliver a clear recommendation with supporting rationale</p>
+            </div>
+        </div>
+
+        <h2>Key Case Types</h2>
+
+        <div class="case-type-box">
+            <h3>1. Market Sizing Cases</h3>
+            <p>Estimate the size of a market or specific metric using logical assumptions and mathematical reasoning.</p>
+            <p><strong>Example:</strong> "How many gas stations are in the United States?"</p>
+            <p><strong>Approaches:</strong></p>
+            <ul>
+                <li><strong>Top-Down:</strong> Start with total population (330M Americans) → households (130M) → cars per household (1.5) → cars (195M) → gas stations needed based on cars per station</li>
+                <li><strong>Bottom-Up:</strong> Start with one gas station → customers per day → scale up based on population density and geography</li>
+            </ul>
+            <p><strong>Key Skills:</strong> Making reasonable assumptions, breaking problems into components, mental math, sense-checking answers</p>
+        </div>
+
+        <div class="case-type-box">
+            <h3>2. Profitability Cases</h3>
+            <p>Diagnose why a company's profits are declining or identify opportunities to improve profitability.</p>
+            <p><strong>Framework:</strong> Profit = Revenue - Costs</p>
+            <p><strong>Revenue Drivers:</strong></p>
+            <ul>
+                <li>Price: Pricing strategy, discounts, product mix</li>
+                <li>Quantity: Sales volume, market share, customer acquisition/retention</li>
+            </ul>
+            <p><strong>Cost Drivers:</strong></p>
+            <ul>
+                <li>Fixed Costs: Rent, salaries, overhead, depreciation</li>
+                <li>Variable Costs: Cost of goods sold (COGS), direct labor, commissions</li>
+            </ul>
+            <p><strong>Common Issues:</strong> Increased competition driving down prices, rising input costs, operational inefficiencies, shifts in product mix toward lower-margin items</p>
+        </div>
+
+        <div class="case-type-box">
+            <h3>3. Market Entry Cases</h3>
+            <p>Determine whether a company should enter a new market, launch a new product, or pursue an acquisition.</p>
+            <p><strong>Framework: Market Attractiveness + Company Fit</strong></p>
+            <p><strong>Market Attractiveness:</strong></p>
+            <ul>
+                <li>Market size and growth rate</li>
+                <li>Competitive intensity (Porter's Five Forces)</li>
+                <li>Profitability and margins</li>
+                <li>Regulatory environment</li>
+            </ul>
+            <p><strong>Company Fit:</strong></p>
+            <ul>
+                <li>Core competencies and capabilities</li>
+                <li>Resources required vs. available</li>
+                <li>Strategic alignment with company goals</li>
+                <li>Competitive advantage / differentiation</li>
+            </ul>
+        </div>
+
+        <div class="case-type-box">
+            <h3>4. M&A / Investment Cases</h3>
+            <p>Evaluate whether a company should acquire another company or make a strategic investment.</p>
+            <p><strong>Key Considerations:</strong></p>
+            <ul>
+                <li><strong>Strategic Rationale:</strong> Does this acquisition create value? Revenue synergies? Cost synergies?</li>
+                <li><strong>Financial Analysis:</strong> Valuation (DCF, comparable companies), ROI, payback period</li>
+                <li><strong>Integration Risk:</strong> Cultural fit, technology systems, customer retention</li>
+                <li><strong>Alternatives:</strong> Organic growth, partnerships, smaller acquisitions</li>
+            </ul>
+        </div>
+
+        <h2>Mental Math Tips</h2>
+        <p>Quick calculations are essential in case interviews. Here are strategies used by successful candidates:</p>
+        <ul>
+            <li><strong>Round strategically:</strong> 47 × 23 ≈ 50 × 20 = 1,000 (then adjust: actual is slightly higher, ~1,081)</li>
+            <li><strong>Break down percentages:</strong> 15% of 240 = 10% (24) + 5% (12) = 36</li>
+            <li><strong>Use benchmarks:</strong> Memorize that 1/7 ≈ 14%, 1/8 = 12.5%, 1/9 ≈ 11%</li>
+            <li><strong>Simplify fractions:</strong> 450/75 = 45/7.5 = 90/15 = 6</li>
+        </ul>
+
+        <div class="tip-box">
+            <h4>Pro Tip: The 80/20 Rule in Case Interviews</h4>
+            <p>Focus 80% of your preparation time on mastering frameworks and structured thinking. The remaining 20% should go to mental math practice and industry knowledge. Most candidates fail due to poor structure, not calculation errors.</p>
+        </div>
+
+        <h2>Common Frameworks</h2>
+
+        <h3>The Profitability Framework</h3>
+        <p>Use when a company's profits are declining or you need to improve margins:</p>
+        <ul>
+            <li>Revenue = Price × Quantity</li>
+            <li>Costs = Fixed Costs + Variable Costs</li>
+            <li>Profit = Revenue - Costs</li>
+        </ul>
+
+        <h3>The 4Cs Framework</h3>
+        <p>General business analysis framework:</p>
+        <ul>
+            <li><strong>Company:</strong> Internal capabilities, resources, strengths/weaknesses</li>
+            <li><strong>Customers:</strong> Needs, segments, buying behavior, willingness to pay</li>
+            <li><strong>Competition:</strong> Direct competitors, substitutes, market share, competitive advantages</li>
+            <li><strong>Context:</strong> Industry trends, regulations, economic factors, technology changes</li>
+        </ul>
+
+        <h3>Porter's Five Forces</h3>
+        <p>Analyze industry competitiveness:</p>
+        <ul>
+            <li>Threat of new entrants</li>
+            <li>Bargaining power of suppliers</li>
+            <li>Bargaining power of buyers</li>
+            <li>Threat of substitute products</li>
+            <li>Competitive rivalry among existing firms</li>
+        </ul>
+
+        <h2>The STAR Method for Fit Interviews</h2>
+        <p>Consulting interviews also include behavioral questions. Use STAR to structure your answers:</p>
+        <ul>
+            <li><strong>Situation:</strong> Set the context (what was happening?)</li>
+            <li><strong>Task:</strong> Describe your responsibility (what did you need to accomplish?)</li>
+            <li><strong>Action:</strong> Explain what you did (be specific about YOUR actions)</li>
+            <li><strong>Result:</strong> Share the outcome (quantify when possible: "increased sales by 25%")</li>
+        </ul>
+
+        <div class="tip-box">
+            <h4>Practice Recommendation</h4>
+            <p>Aim for 20-30 practice cases before your interview. Do 60% solo practice (to build frameworks and structure), 30% with partners (to practice verbal communication), and 10% mock interviews with experienced consultants or coaches for feedback.</p>
+        </div>
+
+        <h2>Sample Case Walkthrough</h2>
+        <p><strong>Case Prompt:</strong> "Your client is a national coffee shop chain experiencing declining profits over the past year despite steady revenue. What would you investigate?"</p>
+
+        <p><strong>Step 1 - Clarify:</strong></p>
+        <ul>
+            <li>"Can you clarify the timeframe - has this been happening for exactly one year or gradually over time?"</li>
+            <li>"Is revenue truly flat, or has it grown slightly while profits declined?"</li>
+            <li>"Are we looking at company-wide profits or specific regions/stores?"</li>
+        </ul>
+
+        <p><strong>Step 2 - Structure:</strong></p>
+        <p>"Since revenue is stable but profits are declining, I'd like to use a profitability framework focusing on the cost side. I'll examine both fixed and variable costs, then explore operational factors."</p>
+
+        <p><strong>My Structure:</strong></p>
+        <ul>
+            <li>Revenue (baseline check)</li>
+            <li>Fixed Costs: Rent, salaries, overhead</li>
+            <li>Variable Costs: Coffee beans, milk, supplies, labor per transaction</li>
+            <li>Operational Factors: Waste, efficiency, product mix</li>
+        </ul>
+
+        <p><strong>Step 3 - Analyze:</strong></p>
+        <p>"Let me start by confirming revenue is truly stable..." [Work through each branch of your framework based on data provided]</p>
+
+        <p><strong>Step 4 - Synthesize:</strong></p>
+        <p>"Based on my analysis, I recommend the client focus on three areas: (1) Renegotiate coffee bean supply contracts to reduce the 15% cost increase, (2) Implement waste reduction training to address the 8% spoilage rate, and (3) Adjust staffing models to reduce labor costs during off-peak hours. Together, these should restore profitability to previous levels within 6 months."</p>
+
+        <h2>Additional Resources</h2>
+        <ul>
+            <li><strong>Case Interview Practice:</strong> <a href="https://www.bain.com/careers/interview-preparation/" target="_blank" style="color: #3b82f6;">Bain Interview Guide</a></li>
+            <li><strong>Case Examples:</strong> <a href="https://www.mckinsey.com/careers/interviewing" target="_blank" style="color: #3b82f6;">McKinsey Practice Cases</a></li>
+        </ul>
+
+        <h2>Sources & References</h2>
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+            <p style="font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>This guide synthesizes information from:</strong></p>
+            <ul style="font-size: 0.95rem; line-height: 1.8;">
+                <li>Bain & Company. (2024). "Interview Preparation." <a href="https://www.bain.com/careers/interview-preparation/" target="_blank" style="color: #3b82f6;">bain.com/careers/interview-preparation</a></li>
+                <li>McKinsey & Company. (2024). "How to Prepare for Consulting Interviews." <a href="https://www.mckinsey.com/careers/interviewing" target="_blank" style="color: #3b82f6;">mckinsey.com/careers/interviewing</a></li>
+                <li>Boston Consulting Group. (2024). "Interview Prep Resources." BCG Careers Portal.</li>
+                <li>Cheng, V. (2024). "Case Interview Secrets." Case Interview Frameworks and Methodologies.</li>
+                <li>Harvard Business School. (2023). "Case Method Teaching." Business Case Analysis Approaches.</li>
+                <li>Porter, M. E. (1979). "How Competitive Forces Shape Strategy." Harvard Business Review.</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 1rem; margin-bottom: 0;">Content compiled and synthesized by BHS Finance Club for educational purposes. Framework methodologies represent industry-standard consulting practices.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BHS Finance Club. Built by students, for students.</p>
+        <p style="margin-top: 0.5rem;">Questions? Email us at <strong>bhsfinanceclub@example.com</strong></p>
+    </footer>
+</body>
+</html>

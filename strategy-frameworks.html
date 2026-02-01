@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Strategy Frameworks | BHS Finance Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+
+        header {
+            background-color: #0f172a;
+            color: white;
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 5%;
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .breadcrumb span {
+            color: #64748b;
+            margin: 0 0.5rem;
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem 0;
+            color: #0f172a;
+            font-weight: 800;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #475569;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .framework-box {
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-left: 4px solid #3b82f6;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .framework-box h3 {
+            margin-top: 0;
+            color: #3b82f6;
+            font-size: 1.8rem;
+        }
+
+        .framework-visual {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 1px solid #cbd5e1;
+        }
+
+        .grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .grid-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #cbd5e1;
+            text-align: center;
+        }
+
+        .grid-box strong {
+            color: #3b82f6;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        li strong {
+            color: #0f172a;
+        }
+
+        .tip-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h4 {
+            color: #1e3a8a;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .tip-box p {
+            color: #1e40af;
+            margin: 0;
+        }
+
+        .five-forces {
+            display: grid;
+            grid-template-areas: 
+                ". top ."
+                "left center right"
+                ". bottom .";
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .force-box {
+            background: #ffffff;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 2px solid #cbd5e1;
+            text-align: center;
+        }
+
+        .force-center {
+            grid-area: center;
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .force-top { grid-area: top; }
+        .force-left { grid-area: left; }
+        .force-right { grid-area: right; }
+        .force-bottom { grid-area: bottom; }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 3.5rem 5%;
+            margin-top: 6rem;
+            border-top: 3px solid #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2x2 {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BHS Finance Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="learning.html">Self-Learning Hub</a>
+        <span>›</span>
+        <a href="pathway-consulting.html">Consulting</a>
+        <span>›</span>
+        Strategy Frameworks
+    </div>
+
+    <div class="content">
+        <h1>Business Strategy Frameworks</h1>
+        <p>Strategic frameworks provide structured approaches to analyze businesses, industries, and competitive dynamics. Consultants and corporate strategists use these tools to diagnose problems, identify opportunities, and develop recommendations. Master these frameworks to think strategically about business challenges.</p>
+
+        <div class="framework-box">
+            <h3>Porter's Five Forces</h3>
+            <p><strong>Purpose:</strong> Analyze industry attractiveness and competitive intensity</p>
+            <p><strong>Created by:</strong> Michael Porter, Harvard Business School (1979)</p>
+            
+            <div class="framework-visual">
+                <div class="five-forces">
+                    <div class="force-box force-top">
+                        <strong>Threat of New Entrants</strong>
+                        <p style="font-size: 0.9rem; margin: 0;">Barriers to entry, capital requirements, economies of scale</p>
+                    </div>
+                    <div class="force-box force-left">
+                        <strong>Supplier Power</strong>
+                        <p style="font-size: 0.9rem; margin: 0;">Supplier concentration, switching costs, forward integration</p>
+                    </div>
+                    <div class="force-box force-center">
+                        <strong>COMPETITIVE RIVALRY</strong>
+                    </div>
+                    <div class="force-box force-right">
+                        <strong>Buyer Power</strong>
+                        <p style="font-size: 0.9rem; margin: 0;">Buyer concentration, price sensitivity, backward integration</p>
+                    </div>
+                    <div class="force-box force-bottom">
+                        <strong>Threat of Substitutes</strong>
+                        <p style="font-size: 0.9rem; margin: 0;">Alternative products, relative price-performance, switching ease</p>
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>How to Use:</strong></p>
+            <ul>
+                <li><strong>Analyze each force:</strong> Rate as high, medium, or low</li>
+                <li><strong>Stronger forces = less attractive industry:</strong> High competitive intensity reduces profitability</li>
+                <li><strong>Identify strategic opportunities:</strong> Can you reduce force intensity? (build barriers, lock in suppliers, differentiate from substitutes)</li>
+            </ul>
+
+            <div class="tip-box">
+                <h4>Example Application</h4>
+                <p><strong>Airline Industry:</strong> High rivalry (many competitors), high buyer power (price-sensitive customers), high threat of new entrants (when regulations allow), moderate supplier power (Boeing/Airbus duopoly), low substitute threat (limited alternatives for long distance). Result: Structurally unattractive industry with low margins.</p>
+            </div>
+        </div>
+
+        <div class="framework-box">
+            <h3>SWOT Analysis</h3>
+            <p><strong>Purpose:</strong> Assess strategic position and identify action items</p>
+            
+            <div class="framework-visual">
+                <div class="grid-2x2">
+                    <div class="grid-box" style="border-color: #10b981;">
+                        <strong>Strengths (Internal)</strong>
+                        <p style="font-size: 0.95rem;">What advantages do we have? Core competencies, resources, capabilities</p>
+                    </div>
+                    <div class="grid-box" style="border-color: #ef4444;">
+                        <strong>Weaknesses (Internal)</strong>
+                        <p style="font-size: 0.95rem;">What disadvantages? Gaps in capabilities, resource constraints, vulnerabilities</p>
+                    </div>
+                    <div class="grid-box" style="border-color: #3b82f6;">
+                        <strong>Opportunities (External)</strong>
+                        <p style="font-size: 0.95rem;">Market trends, unmet needs, regulatory changes, new technologies</p>
+                    </div>
+                    <div class="grid-box" style="border-color: #f59e0b;">
+                        <strong>Threats (External)</strong>
+                        <p style="font-size: 0.95rem;">Competition, market shifts, economic factors, disruptive technologies</p>
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Strategic Actions:</strong></p>
+            <ul>
+                <li><strong>Leverage Strengths to Capture Opportunities:</strong> What can we uniquely do?</li>
+                <li><strong>Shore Up Weaknesses:</strong> What gaps must we fill to compete?</li>
+                <li><strong>Mitigate Threats:</strong> How can we defend against competitive forces?</li>
+                <li><strong>Convert Weaknesses to Strengths:</strong> Strategic investments or partnerships</li>
+            </ul>
+        </div>
+
+        <div class="framework-box">
+            <h3>BCG Growth-Share Matrix</h3>
+            <p><strong>Purpose:</strong> Portfolio analysis for multi-product/business companies</p>
+            <p><strong>Created by:</strong> Boston Consulting Group (1970)</p>
+
+            <div class="framework-visual">
+                <div class="grid-2x2">
+                    <div class="grid-box" style="background: #fef3c7;">
+                        <strong>⭐ Stars</strong>
+                        <p style="font-size: 0.95rem;">High Growth, High Market Share</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Strategy: Invest to maintain leadership</em></p>
+                    </div>
+                    <div class="grid-box" style="background: #dbeafe;">
+                        <strong>❓ Question Marks</strong>
+                        <p style="font-size: 0.95rem;">High Growth, Low Market Share</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Strategy: Invest heavily or divest</em></p>
+                    </div>
+                    <div class="grid-box" style="background: #d1fae5;">
+                        <strong>💰 Cash Cows</strong>
+                        <p style="font-size: 0.95rem;">Low Growth, High Market Share</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Strategy: Harvest cash to fund Stars</em></p>
+                    </div>
+                    <div class="grid-box" style="background: #fee2e2;">
+                        <strong>🐕 Dogs</strong>
+                        <p style="font-size: 0.95rem;">Low Growth, Low Market Share</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Strategy: Divest or minimize investment</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Portfolio Strategy:</strong> Use cash from Cash Cows to invest in Stars and promising Question Marks. Exit Dogs. Ideal portfolio has a balance of cash generators and growth opportunities.</p>
+        </div>
+
+        <div class="framework-box">
+            <h3>Value Chain Analysis</h3>
+            <p><strong>Purpose:</strong> Identify sources of competitive advantage in operations</p>
+            <p><strong>Created by:</strong> Michael Porter (1985)</p>
+
+            <p><strong>Primary Activities (Direct value creation):</strong></p>
+            <ul>
+                <li><strong>Inbound Logistics:</strong> Receiving, warehousing, inventory management</li>
+                <li><strong>Operations:</strong> Manufacturing, assembly, quality control</li>
+                <li><strong>Outbound Logistics:</strong> Distribution, order fulfillment, delivery</li>
+                <li><strong>Marketing & Sales:</strong> Advertising, pricing, channel management</li>
+                <li><strong>Service:</strong> Installation, training, repair, customer support</li>
+            </ul>
+
+            <p><strong>Support Activities (Enable primary activities):</strong></p>
+            <ul>
+                <li><strong>Firm Infrastructure:</strong> Finance, legal, quality management</li>
+                <li><strong>Human Resource Management:</strong> Recruiting, training, compensation</li>
+                <li><strong>Technology Development:</strong> R&D, process automation, product design</li>
+                <li><strong>Procurement:</strong> Purchasing raw materials, negotiating with vendors</li>
+            </ul>
+
+            <div class="tip-box">
+                <h4>Application</h4>
+                <p>Analyze each activity to find where you create the most value and where you can improve efficiency. Example: Amazon excels at outbound logistics (fast delivery) and technology (recommendation algorithms), creating competitive advantage.</p>
+            </div>
+        </div>
+
+        <div class="framework-box">
+            <h3>Ansoff Growth Matrix</h3>
+            <p><strong>Purpose:</strong> Identify growth strategies based on products and markets</p>
+
+            <div class="framework-visual">
+                <div class="grid-2x2">
+                    <div class="grid-box" style="border-color: #10b981; border-width: 3px;">
+                        <strong>Market Penetration</strong>
+                        <p style="font-size: 0.95rem;">Existing Product, Existing Market</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Lowest risk: Increase market share through pricing, promotion, distribution</em></p>
+                    </div>
+                    <div class="grid-box" style="border-color: #3b82f6; border-width: 3px;">
+                        <strong>Market Development</strong>
+                        <p style="font-size: 0.95rem;">Existing Product, New Market</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Medium risk: Enter new geographies, segments, or channels</em></p>
+                    </div>
+                    <div class="grid-box" style="border-color: #f59e0b; border-width: 3px;">
+                        <strong>Product Development</strong>
+                        <p style="font-size: 0.95rem;">New Product, Existing Market</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Medium risk: Create new products for current customers</em></p>
+                    </div>
+                    <div class="grid-box" style="border-color: #ef4444; border-width: 3px;">
+                        <strong>Diversification</strong>
+                        <p style="font-size: 0.95rem;">New Product, New Market</p>
+                        <p style="font-size: 0.85rem; margin: 0;"><em>Highest risk: Enter entirely new businesses</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="framework-box">
+            <h3>The 4Ps Marketing Mix</h3>
+            <p><strong>Purpose:</strong> Design comprehensive marketing strategy</p>
+
+            <ul>
+                <li><strong>Product:</strong> Features, quality, design, branding, packaging, warranties
+                    <ul style="margin-top: 0.5rem;">
+                        <li>What needs does it satisfy?</li>
+                        <li>How does it differentiate from competitors?</li>
+                    </ul>
+                </li>
+                <li><strong>Price:</strong> Pricing strategy, discounts, payment terms, perceived value
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Premium pricing vs. cost leadership?</li>
+                        <li>How price-sensitive are customers?</li>
+                    </ul>
+                </li>
+                <li><strong>Place (Distribution):</strong> Channels, locations, inventory, logistics
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Where do customers buy?</li>
+                        <li>Direct sales vs. intermediaries?</li>
+                    </ul>
+                </li>
+                <li><strong>Promotion:</strong> Advertising, PR, sales force, digital marketing
+                    <ul style="margin-top: 0.5rem;">
+                        <li>What message resonates with target customers?</li>
+                        <li>Which channels reach them effectively?</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="framework-box">
+            <h3>PESTEL Analysis</h3>
+            <p><strong>Purpose:</strong> Analyze macro-environmental factors affecting business</p>
+
+            <ul>
+                <li><strong>Political:</strong> Government stability, tax policy, trade regulations, labor laws</li>
+                <li><strong>Economic:</strong> GDP growth, interest rates, inflation, unemployment, exchange rates</li>
+                <li><strong>Social:</strong> Demographics, cultural trends, lifestyle changes, education levels</li>
+                <li><strong>Technological:</strong> Innovation, automation, R&D activity, tech adoption rates</li>
+                <li><strong>Environmental:</strong> Climate change, sustainability, resource scarcity, carbon regulations</li>
+                <li><strong>Legal:</strong> Consumer protection, antitrust, IP rights, employment law, safety regulations</li>
+            </ul>
+
+            <p><strong>Use Case:</strong> Understanding external forces when entering new markets or planning long-term strategy.</p>
+        </div>
+
+        <h2>When to Use Each Framework</h2>
+
+        <div class="framework-visual">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #3b82f6; color: white;">
+                        <th style="padding: 1rem; text-align: left;">Framework</th>
+                        <th style="padding: 1rem; text-align: left;">Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #cbd5e1;">
+                        <td style="padding: 1rem;"><strong>Porter's Five Forces</strong></td>
+                        <td style="padding: 1rem;">Industry analysis, market entry decisions</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;">
+                        <td style="padding: 1rem;"><strong>SWOT</strong></td>
+                        <td style="padding: 1rem;">Strategic planning, business assessment</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;">
+                        <td style="padding: 1rem;"><strong>BCG Matrix</strong></td>
+                        <td style="padding: 1rem;">Portfolio management, resource allocation</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;">
+                        <td style="padding: 1rem;"><strong>Value Chain</strong></td>
+                        <td style="padding: 1rem;">Operational efficiency, cost reduction</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;">
+                        <td style="padding: 1rem;"><strong>Ansoff Matrix</strong></td>
+                        <td style="padding: 1rem;">Growth strategy, expansion planning</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;">
+                        <td style="padding: 1rem;"><strong>4Ps</strong></td>
+                        <td style="padding: 1rem;">Marketing strategy, product launches</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem;"><strong>PESTEL</strong></td>
+                        <td style="padding: 1rem;">Macro-environmental scanning, scenario planning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tip-box">
+            <h4>Framework Selection Tip</h4>
+            <p>Don't force-fit frameworks. Choose based on the question you're trying to answer. Often, you'll combine multiple frameworks (e.g., PESTEL for external environment + SWOT for company position + Porter's for industry dynamics) for comprehensive analysis.</p>
+        </div>
+
+        <h2>Sources & References</h2>
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+            <p style="font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>This guide synthesizes information from:</strong></p>
+            <ul style="font-size: 0.95rem; line-height: 1.8;">
+                <li>Porter, M. E. (1979). "How Competitive Forces Shape Strategy." Harvard Business Review.</li>
+                <li>Porter, M. E. (1985). "Competitive Advantage: Creating and Sustaining Superior Performance." Free Press.</li>
+                <li>Boston Consulting Group. (1970). "The Product Portfolio Matrix." BCG Classics.</li>
+                <li>Ansoff, H. I. (1957). "Strategies for Diversification." Harvard Business Review.</li>
+                <li>McCarthy, E. J. (1960). "Basic Marketing: A Managerial Approach." Richard D. Irwin.</li>
+                <li>Harvard Business School. (2024). "Strategic Management Frameworks." HBS Course Materials.</li>
+                <li>McKinsey & Company. (2024). "Strategy & Corporate Finance Insights." McKinsey Quarterly.</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 1rem; margin-bottom: 0;">Content compiled and synthesized by BHS Finance Club for educational purposes. Frameworks represent seminal work in strategic management.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BHS Finance Club. Built by students, for students.</p>
+        <p style="margin-top: 0.5rem;">Questions? Email us at <strong>bhsfinanceclub@example.com</strong></p>
+    </footer>
+</body>
+</html>

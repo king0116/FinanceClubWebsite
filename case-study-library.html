@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Case Study Library | BHS Finance Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+
+        header {
+            background-color: #0f172a;
+            color: white;
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 5%;
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .breadcrumb span {
+            color: #64748b;
+            margin: 0 0.5rem;
+        }
+
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 5%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem 0;
+            color: #0f172a;
+            font-weight: 800;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #475569;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .case-study {
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-left: 4px solid #3b82f6;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .case-study h3 {
+            color: #3b82f6;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .case-tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 0.5rem 0.5rem 1rem 0;
+        }
+
+        .case-section {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 3px solid #3b82f6;
+        }
+
+        .case-section h4 {
+            color: #0f172a;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        li strong {
+            color: #0f172a;
+        }
+
+        .calculation-box {
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .tip-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .tip-box h4 {
+            color: #1e3a8a;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .tip-box p {
+            color: #1e40af;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 3.5rem 5%;
+            margin-top: 6rem;
+            border-top: 3px solid #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BHS Finance Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="learning.html">Self-Learning Hub</a>
+        <span>›</span>
+        <a href="pathway-consulting.html">Consulting</a>
+        <span>›</span>
+        Case Study Library
+    </div>
+
+    <div class="content">
+        <h1>Consulting Case Study Library</h1>
+        <p>Practice with real-world business cases that mirror consulting interviews and strategic challenges. Each case includes the problem statement, suggested framework, analysis approach, and recommended solution. Work through these to build your case-solving skills.</p>
+
+        <div class="case-study">
+            <h3>Case 1: Declining Retail Chain Profitability</h3>
+            <span class="case-tag">Profitability</span>
+            <span class="case-tag">Retail</span>
+            <span class="case-tag">Operations</span>
+
+            <div class="case-section">
+                <h4>📋 Problem Statement</h4>
+                <p>Your client is a national retail chain with 200 stores across the United States. Over the past two years, overall profitability has declined by 15%, despite revenue remaining relatively stable (growing only 2% annually). The CEO has hired your consulting firm to diagnose the issue and recommend solutions.</p>
+                <p><strong>Key Data Provided:</strong></p>
+                <ul>
+                    <li>Revenue: $500M (up 2% from $490M two years ago)</li>
+                    <li>Net margin: 3% (down from 7% two years ago)</li>
+                    <li>Number of stores: Unchanged at 200</li>
+                    <li>Average transaction value: Stable at $45</li>
+                    <li>Customer traffic: Down 5% year-over-year</li>
+                </ul>
+            </div>
+
+            <div class="case-section">
+                <h4>🎯 Recommended Framework</h4>
+                <p><strong>Profitability Framework: Profit = Revenue - Costs</strong></p>
+                <p>Since revenue is stable but profits are declining, focus on the cost side:</p>
+                <ul>
+                    <li><strong>Revenue Check:</strong> Confirm components (price × quantity) and any mix shifts</li>
+                    <li><strong>Fixed Costs:</strong> Rent, corporate overhead, store salaries</li>
+                    <li><strong>Variable Costs:</strong> Cost of goods sold (COGS), shipping, sales commissions</li>
+                    <li><strong>Operational Factors:</strong> Inventory management, waste/shrinkage, labor efficiency</li>
+                </ul>
+            </div>
+
+            <div class="case-section">
+                <h4>🔍 Analysis & Findings</h4>
+                <p><strong>Revenue Analysis:</strong></p>
+                <div class="calculation-box">
+                Revenue = Price × Quantity
+                $500M = $45 × 11.1M transactions
+                (Note: Customer traffic down 5%, but average basket size up slightly)
+                </div>
+
+                <p><strong>Cost Analysis Reveals:</strong></p>
+                <ul>
+                    <li><strong>COGS increased 12%:</strong> Investigation shows supplier costs rose due to poor contract renegotiation and loss of volume discounts from declining purchases</li>
+                    <li><strong>Inventory shrinkage at 8%:</strong> Industry average is 2-3%. Root cause: inadequate inventory controls and outdated point-of-sale systems</li>
+                    <li><strong>Labor costs up 6%:</strong> Due to inefficient scheduling; stores overstaffed during slow periods</li>
+                    <li><strong>Distribution costs up 7%:</strong> Increased rush shipping to address stockouts from poor inventory forecasting</li>
+                </ul>
+
+                <p><strong>Impact Calculation:</strong></p>
+                <div class="calculation-box">
+                Baseline Net Margin (2 years ago): 7% of $490M = $34.3M profit
+                Current Net Margin: 3% of $500M = $15M profit
+                Profit Decline: $19.3M (56% reduction)
+
+                Contributing Factors:
+                - COGS increase: ~$6M impact
+                - Shrinkage (excess 5%): ~$25M impact  
+                - Labor inefficiency: ~$3M impact
+                - Rush shipping: ~$3.5M impact
+                </div>
+            </div>
+
+            <div class="case-section">
+                <h4>💡 Recommendations</h4>
+                <p><strong>Immediate Actions (0-3 months):</strong></p>
+                <ul>
+                    <li><strong>Renegotiate supplier contracts:</strong> Consolidate vendors, commit to volume guarantees in exchange for 8-10% cost reduction</li>
+                    <li><strong>Implement inventory control system:</strong> RFID tagging and improved POS integration to reduce shrinkage to 3% within 6 months</li>
+                    <li><strong>Optimize labor scheduling:</strong> Use data analytics to match staffing to traffic patterns, reducing labor costs by 4%</li>
+                </ul>
+
+                <p><strong>Medium-term Initiatives (3-12 months):</strong></p>
+                <ul>
+                    <li><strong>Demand forecasting system:</strong> Reduce stockouts and rush shipping through better inventory planning</li>
+                    <li><strong>Store productivity review:</strong> Identify and close/relocate bottom 10% of stores by profitability</li>
+                    <li><strong>Category management:</strong> Shift product mix toward higher-margin items</li>
+                </ul>
+
+                <p><strong>Expected Impact:</strong></p>
+                <div class="calculation-box">
+                Total Potential Margin Improvement: 5-6 percentage points
+                Timeline to 7% margins: 12-18 months
+                Investment Required: $8M (systems + severance)
+                ROI: Positive within 9 months
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <h3>Case 2: Software Company Market Entry</h3>
+            <span class="case-tag">Market Entry</span>
+            <span class="case-tag">Technology</span>
+            <span class="case-tag">Strategy</span>
+
+            <div class="case-section">
+                <h4>📋 Problem Statement</h4>
+                <p>Your client is a successful B2B SaaS company providing project management software to mid-market companies in North America. They are considering entering the European market. The CEO wants to know if this is a good strategic move and, if so, how to approach it.</p>
+                <p><strong>Client Background:</strong></p>
+                <ul>
+                    <li>Current revenue: $80M ARR (annual recurring revenue)</li>
+                    <li>Growth rate: 30% year-over-year</li>
+                    <li>Customer base: 2,000 companies (avg $40K/year subscription)</li>
+                    <li>Gross margin: 85%</li>
+                    <li>Target market: 50-500 employee companies</li>
+                </ul>
+            </div>
+
+            <div class="case-section">
+                <h4>🎯 Recommended Framework</h4>
+                <p><strong>Market Entry Framework: Market Attractiveness + Company Fit</strong></p>
+                <p><strong>Market Attractiveness:</strong></p>
+                <ul>
+                    <li>Market size and growth</li>
+                    <li>Competitive landscape</li>
+                    <li>Customer needs and willingness to pay</li>
+                    <li>Regulatory environment</li>
+                </ul>
+                <p><strong>Company Fit:</strong></p>
+                <ul>
+                    <li>Can we compete effectively?</li>
+                    <li>Do we have required capabilities?</li>
+                    <li>What's the investment required?</li>
+                    <li>Strategic alignment with company goals</li>
+                </ul>
+            </div>
+
+            <div class="case-section">
+                <h4>🔍 Analysis</h4>
+                <p><strong>Market Attractiveness - POSITIVE:</strong></p>
+                <ul>
+                    <li><strong>Market Size:</strong> European project management software market is $2.5B, growing 25% annually</li>
+                    <li><strong>Target Segment:</strong> ~150,000 mid-market companies in EU (3x North American market)</li>
+                    <li><strong>Competitive Gap:</strong> European competitors focus on enterprise; mid-market is underserved</li>
+                    <li><strong>Regulatory:</strong> GDPR compliance required but manageable with existing infrastructure</li>
+                </ul>
+
+                <p><strong>Company Fit - MIXED:</strong></p>
+                <ul>
+                    <li><strong>✓ Product-Market Fit:</strong> Customer needs similar to North America</li>
+                    <li><strong>✓ Competitive Advantage:</strong> Superior UX and pricing vs. European alternatives</li>
+                    <li><strong>✗ Localization Required:</strong> Need to support 5+ languages, local payment methods</li>
+                    <li><strong>✗ Sales Infrastructure:</strong> Current remote sales model may not work; Europeans prefer local presence</li>
+                    <li><strong>✗ Customer Support:</strong> Need local time zone coverage</li>
+                </ul>
+
+                <p><strong>Investment Analysis:</strong></p>
+                <div class="calculation-box">
+                Year 1 Investment:
+                - Product localization: $2M
+                - European sales team (10 reps): $1.5M
+                - Marketing/brand building: $1M
+                - Legal/compliance: $500K
+                Total: $5M
+
+                Revenue Projection:
+                Year 1: $5M ARR (125 customers @ $40K avg)
+                Year 2: $15M ARR (with 200% growth)
+                Year 3: $35M ARR (with 130% growth)
+                
+                Payback Period: ~18 months
+                </div>
+            </div>
+
+            <div class="case-section">
+                <h4>💡 Recommendation</h4>
+                <p><strong>Decision: YES, enter the European market</strong></p>
+                <p><strong>Rationale:</strong></p>
+                <ul>
+                    <li>Large, fast-growing market with underserved mid-market segment</li>
+                    <li>Clear competitive advantage in target segment</li>
+                    <li>Reasonable investment with strong ROI potential</li>
+                    <li>De-risks company by diversifying geographically</li>
+                </ul>
+
+                <p><strong>Entry Strategy:</strong></p>
+                <ul>
+                    <li><strong>Phase 1 (Months 1-6):</strong> UK market only (English-speaking, largest market, easiest entry)</li>
+                    <li><strong>Phase 2 (Months 6-12):</strong> Germany and France (largest non-English markets)</li>
+                    <li><strong>Phase 3 (Year 2+):</strong> Expand to Benelux, Nordics, Southern Europe</li>
+                </ul>
+
+                <p><strong>Key Success Factors:</strong></p>
+                <ul>
+                    <li>Hire experienced European sales leader in Month 1</li>
+                    <li>Establish partnerships with local implementation consultants</li>
+                    <li>Invest in case studies and testimonials from European customers early</li>
+                    <li>Adapt pricing to local market conditions (may need 10-15% discount vs. US)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <h3>Case 3: Manufacturing Cost Reduction</h3>
+            <span class="case-tag">Operations</span>
+            <span class="case-tag">Cost Reduction</span>
+            <span class="case-tag">Manufacturing</span>
+
+            <div class="case-section">
+                <h4>📋 Problem Statement</h4>
+                <p>Your client manufactures industrial equipment and has seen margins compress due to rising material and labor costs. The CFO wants to identify $10M in annual cost savings without reducing quality or laying off workers. Can you help them find these savings?</p>
+                <p><strong>Current State:</strong></p>
+                <ul>
+                    <li>Annual revenue: $200M</li>
+                    <li>Operating margin: 8% (target: 13%)</li>
+                    <li>Manufacturing costs: $140M (70% of revenue)</li>
+                    <li>Three factories producing similar products</li>
+                    <li>1,500 employees total</li>
+                </ul>
+            </div>
+
+            <div class="case-section">
+                <h4>🎯 Framework</h4>
+                <p><strong>Cost Structure Analysis: Break down $140M manufacturing cost</strong></p>
+                <ul>
+                    <li>Direct materials: 60% ($84M)</li>
+                    <li>Direct labor: 20% ($28M)</li>
+                    <li>Manufacturing overhead: 15% ($21M)</li>
+                    <li>Quality/rework: 5% ($7M)</li>
+                </ul>
+            </div>
+
+            <div class="case-section">
+                <h4>🔍 Findings & Recommendations</h4>
+                
+                <p><strong>Opportunity 1: Material Cost Optimization ($4M savings)</strong></p>
+                <ul>
+                    <li>Purchasing decentralized across three factories with no volume leverage</li>
+                    <li>Using 15 different steel suppliers; consolidate to 3 preferred vendors</li>
+                    <li>Implement centralized procurement with volume commitments</li>
+                    <li>Expected savings: 5% on $84M = $4.2M</li>
+                </ul>
+
+                <p><strong>Opportunity 2: Process Efficiency ($3M savings)</strong></p>
+                <ul>
+                    <li>Factory layout analysis shows excessive material movement</li>
+                    <li>Workers spend 20% of time retrieving parts due to poor organization</li>
+                    <li>Implement lean manufacturing principles and cellular layout</li>
+                    <li>Expected savings: 10% labor productivity gain = $2.8M</li>
+                </ul>
+
+                <p><strong>Opportunity 3: Quality Improvement ($2.5M savings)</strong></p>
+                <ul>
+                    <li>Current defect rate: 5% (industry benchmark: 2%)</li>
+                    <li>Root cause: lack of preventive maintenance on critical equipment</li>
+                    <li>Implement predictive maintenance and statistical process control</li>
+                    <li>Expected savings: Reduce rework by 60% = $2.5M (investment: $500K)</li>
+                </ul>
+
+                <p><strong>Opportunity 4: Energy & Overhead ($1.5M savings)</strong></p>
+                <ul>
+                    <li>Factories run 24/7 but production only 60% of time</li>
+                    <li>Consolidate production to 2 factories, use 3rd for overflow only</li>
+                    <li>LED lighting retrofit and HVAC optimization</li>
+                    <li>Expected savings: $1.5M annually</li>
+                </ul>
+
+                <div class="calculation-box">
+                Total Identified Savings: $11.2M
+                Target: $10M
+                Timeline: 12-18 months for full implementation
+                Investment Required: $3M (equipment, layout changes, systems)
+                Net Benefit Year 1: $8M+
+                </div>
+
+                <p><strong>Implementation Priorities:</strong></p>
+                <ul>
+                    <li><strong>Quick Wins (Months 1-3):</strong> Procurement consolidation, energy audit</li>
+                    <li><strong>Medium-term (Months 3-9):</strong> Process improvements, quality systems</li>
+                    <li><strong>Long-term (Months 9-18):</strong> Factory consolidation, layout optimization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4>Practice Recommendations</h4>
+            <p>Work through each case multiple times: (1) First pass - outline your approach without looking at the answer, (2) Second pass - work through the full analysis, (3) Third pass - practice articulating your recommendation out loud as if presenting to a client. This builds both analytical and communication skills.</p>
+        </div>
+
+        <h2>Sources & References</h2>
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+            <p style="font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>These case studies are inspired by real consulting engagements and synthesize methodologies from:</strong></p>
+            <ul style="font-size: 0.95rem; line-height: 1.8;">
+                <li>McKinsey & Company. (2024). "Case Study Examples." McKinsey Practice Cases.</li>
+                <li>Bain & Company. (2024). "Sample Case Interviews." Bain Careers Resources.</li>
+                <li>Boston Consulting Group. (2024). "Interactive Case Library." BCG Careers.</li>
+                <li>Harvard Business School. (2023). "Case Method and Business Cases." HBS Case Collections.</li>
+                <li>Deloitte Consulting. (2024). "Industry Case Studies." Consulting Insights.</li>
+                <li>Victor Cheng. (2024). "Case Interview Frameworks." Case preparation methodologies.</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 1rem; margin-bottom: 0;">Case studies compiled and adapted by BHS Finance Club for educational purposes. Scenarios and data are illustrative examples based on typical consulting problems.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BHS Finance Club. Built by students, for students.</p>
+        <p style="margin-top: 0.5rem;">Questions? Email us at <strong>bhsfinanceclub@example.com</strong></p>
+    </footer>
+</body>
+</html>
